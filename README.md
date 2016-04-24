@@ -10,11 +10,16 @@ local List:ctor()
 end
 
 function List:push(item)
-  table.insert(self._raw)
+  table.insert(self._raw,item)
+end
+
+function List:length()
+  return #self._raw
 end
 
 
 local list = List:new()
 list:push(1)
 list:push(2)
+print(list:length())
 ```
